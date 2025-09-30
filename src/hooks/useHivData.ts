@@ -14,7 +14,7 @@ export function useHivData() {
     async function loadData() {
       try {
         setLoading(true);
-        const response = await fetch('/src/data/hiv_dataset.csv');
+        const response = await fetch('/data/hiv_dataset.csv');
         const csvText = await response.text();
         
         const parsedRecords = parseCSV(csvText);
